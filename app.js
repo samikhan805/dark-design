@@ -8,7 +8,6 @@ button.addEventListener('click', function() {
   body.classList.toggle('active')
   img.classList.toggle('active')
   mainBtn.classList.toggle('active')
-  
   if (mainBtn.innerHTML == 'Day') {
     mainBtn.innerHTML = 'Dark'
   }
