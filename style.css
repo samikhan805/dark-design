@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  font-family: 'Poppins', Sans-Serif;
+  /*font-family: 'DotGothic16', SSans-Serif*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  transition: 0.4s;
+}
+body.active {
+  background: #292929;
+  color: #fff;
+}
+.container {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+/* Button  */
+.button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: #fff;
+  margin: 0 auto 2rem;
+  padding: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  border: 1px solid #292929;
+}
+.button .main-btn {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 35px;
+  border-radius: 20px;
+  background: #292929;
+  left: 1.5px;
+  transition: 0.5s;
+}
+.button.active {
+  background: #292929;
+  border: 1px solid #fff;
+} 
+.button.active .main-btn {
+  left: 37px;
+  background: #fff;
+}
+
+/* box */
+.box {
+  width: 310px;
+  margin: 4rem auto 3.5rem;
+  text-align: center;
+}
+.img {
+  width: 170px;
+  height: 170px;
+  padding: 0.5rem;
+  margin: 0 auto 1.7rem;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img::before {
+  position: absolute;
+  content: '';
+  width: 170px;
+  height: 170px;
+  top: 0;
+  left: 0;
+  border-radius: 45px;
+  background: #292929;
+  z-index: -1;
+  transition: 0.4s;
+  animation: animate 10s infinite linear;
+}
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.img img {
+  width: 90%;
+  height: auto;
+}
+h2 {
+  margin-bottom: 0.7rem;
+}
+
+.end {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  margin: 2rem auto 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.img.active {
+  background: #292929;
+}
+.img.active::before {
+  background: #fff;
+}
+
+.main-btn {
+  font-size: 0.6rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  color: #fff;
+  font-weight: 700;
+}
+
+.main-btn.active {
+  color: #292929;
+}
